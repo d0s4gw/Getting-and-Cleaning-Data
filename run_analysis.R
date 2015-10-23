@@ -45,7 +45,7 @@ logicalVector = (grepl("activity..",colNames)
                  | grepl("-std..",colNames) & !grepl("-std()..-",colNames))
 finalData = finalData[logicalVector==TRUE]
 
-# Merge the finalData set with the acitivityType table to include descriptive activity names
+# Merge the finalData set with the activityType table to include descriptive activity names
 finalData = merge(finalData,activityType,by='activityId',all.x=TRUE)
 colNames  = colnames(finalData)
 
